@@ -27,17 +27,17 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: var(--font-weight);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: var(--font-weight);
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: var(--font-weight);
 }
 
@@ -56,10 +56,13 @@ a:focus {
   text-decoration: var(--text-decoration);
 }
 
-
 a:active {
   /* selected link */
   color: var(--color-a-active);
+}
+
+.bold__text {
+  font-weight: var(--font-weight);
 }
 
 .button,
@@ -71,8 +74,9 @@ button {
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--color-button-background);
   color: var(--color-button);
-  text-decoration: var(--text-decoration);;
-  /*adds spacing to the button (this will be discussed more in-depth later) */
+  text-decoration: var(--text-decoration);
+
+  /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
@@ -91,49 +95,56 @@ button:focus {
   opacity: 0.8;
 }
 
-.button__secondary {
-  background-color: var(--color-button-secondary-background);
-  color: var(--color-button-secondary);
-}
-
 .navigation-list__item--active {
-  text-decoration: var(--text-decoration);;
+  text-decoration: var(--text-decoration);
+  ;
 }
 
 /* move prtrait on the left side of our page */
 
 .profile__portrait {
+  border: 5px solid black;
   float: left;
-}
-
-.profile__portrait {
-  /* border: 5px solid black; */
-  float: left;
-  width: 250px;
+  width: 400px;
   margin-right: 40px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
+}
+.logo {
+  border: 5px solid black;
+  float: left;
+  width: 300px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .profile {
   /* border: 5px solid black; */
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
+  margin-top: 5%;
 }
 
-/* .skills {
-  border: 5px solid black;
-} */
+.skills__item {
+  border: 2px solid black;
+  text-align: center;
+  padding: 5px;
+}
 
 * {
   box-sizing: border-box;
 }
+
+.title {
+  text-align: center;
+  text-decoration: underline black;
+}
+
 /* 
 .user-contact {
   border: 5px solid black;
 } */
 
 .page-header {
-  /* border: 5px solid black; */
   display: flex;
   width: 100%;
   padding: 20px;
@@ -185,6 +196,11 @@ button:focus {
   text-align: center;
 }
 
+.animation {
+  /* border: 5px solid black; */
+  transform: scale(0.9);
+}
+
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -211,11 +227,13 @@ button:focus {
   0% {
     fill: var(--color-change0);
   }
+
   50% {
     fill: var(--color-change50);
   }
+
   100% {
-    fill: #var(--color-change100);
+    fill: var(--color-change100);
   }
 }
 
@@ -231,12 +249,21 @@ button:focus {
   from {
     transform: translate(0, 0);
   }
+
   to {
     transform: translate(50px, 0);
   }
 }
 
-.st5, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29 {
+.st5,
+.st22,
+.st23,
+.st24,
+.st25,
+.st26,
+.st27,
+.st28,
+.st29 {
   animation-duration: 10s;
   animation-name: cloud-move;
   animation-iteration-count: infinite;
@@ -248,9 +275,10 @@ button:focus {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
-  }  
+  }
 }
 
 .st30 {
