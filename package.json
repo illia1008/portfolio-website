@@ -1,0 +1,12 @@
+{
+  "homepage": "https://illia1008.github.io/portfolio-website",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}
